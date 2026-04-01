@@ -152,7 +152,7 @@ const Features = () => (
               className="material-symbols-outlined text-primary-container"
               style={{ fontVariationSettings: "'FILL' 1" }}
             >
-              cashback
+              payments
             </span>
           </div>
           <h3 className="text-xl font-headline font-bold mb-4">
