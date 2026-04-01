@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Navbar = () => (
   <nav className="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl flex justify-between items-center px-8 py-4 max-w-7xl mx-auto shadow-2xl shadow-black/20 left-1/2 -translate-x-1/2">
@@ -31,7 +32,10 @@ const Navbar = () => (
         FAQ
       </a>
     </div>
-    <button className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary-container/20">
+    <button 
+      aria-label="Get Access to IPTV"
+      className="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-bold hover:scale-105 transition-transform duration-300 shadow-lg shadow-primary-container/20"
+    >
       Get Access
     </button>
   </nav>
@@ -40,11 +44,14 @@ const Navbar = () => (
 const Hero = () => (
   <section className="relative min-h-screen flex items-center pt-24 overflow-hidden">
     <div className="absolute inset-0 z-0">
-      <img
-        className="w-full h-full object-cover opacity-80"
+      <Image
+        className="object-cover opacity-80"
         alt="Luxury modern living room at night with a large glowing 4K OLED TV background"
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAauBSkq1u-GXibOlsuY6Z8JIl7ede0tPRPIzBk7n5KjhjwMEHc4wQR0bIE3nty2f9oVfHwBv10S0jEPkjmnNxSP2UwaORglhcptW2WserSUoYu3QeAsHQqG4mq9phlYoQinweSaDgkMwtTPsQRu6UHU4iAJ0JmRK2wkx6ziZ6Kg5p8sv0ukmWOOl24WOh9ApLu6OkO9BI53qe_SmQUvrJTP-6S1BnKk7T-8Z0poIlpCp-UMDf-ojsPz6WPZWdbufkjyiM09597lhs"
         referrerPolicy="no-referrer"
+        fill
+        priority
+        sizes="100vw"
       />
       <div className="absolute inset-0 hero-gradient"></div>
     </div>
@@ -62,7 +69,10 @@ const Hero = () => (
         quality, and a built-in VPN — all activated instantly after secure
         checkout.
       </p>
-      <button className="bg-gradient-to-r from-primary-container to-tertiary-container text-white px-10 py-5 rounded-xl text-xl font-bold mb-16 hover:scale-105 transition-transform duration-300 shadow-2xl shadow-primary-container/30">
+      <button 
+        aria-label="Buy IPTV Subscription Now"
+        className="bg-gradient-to-r from-primary-container to-tertiary-container text-white px-10 py-5 rounded-xl text-xl font-bold mb-16 hover:scale-105 transition-transform duration-300 shadow-2xl shadow-primary-container/30"
+      >
         Buy Now — Streaming in Under 5 Minutes
       </button>
       <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto border-t border-outline-variant/15 pt-12">
@@ -211,11 +221,13 @@ const WhyChooseUs = () => (
       </div>
       <div className="relative group">
         <div className="absolute inset-0 bg-primary-container/20 rounded-xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50"></div>
-        <img
-          className="relative z-10 rounded-xl border border-outline-variant/20 shadow-2xl transition-transform duration-500 group-hover:-translate-y-2"
+        <Image
+          className="relative z-10 rounded-xl border border-outline-variant/20 shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 object-cover"
           alt="Close-up of a premium TV screen showing a channel grid with a modern remote control"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBJNmDno01g10sgADJZEFABU6u5r_pO2iJYRyoO3FCbqOiYWpKvhUr-Yud3eqNHuCLdUiLXB1g46sqVpQJB2Cy_fc2R4s8SoAPxgi9Tjk_DK5MRrXiO-H2nz9RY7Bo2oVkHnOc5mkt48MP0mPyHNVWTy6M2u3mXgGCFrlLMxGHOJ9Oq8Ve-NsxiKuddQ7Fd61TZljlBU9kEZbtIJ6IhCjAtlZpAgqrAwa9Bc0GifZaBmjT8R4r1bBTFU4XBnis3cj7A4CT5iQz-_I"
           referrerPolicy="no-referrer"
+          width={600}
+          height={400}
         />
       </div>
     </div>
@@ -268,7 +280,10 @@ const Pricing = () => (
               </li>
             ))}
           </ul>
-          <button className="w-full py-4 rounded-lg bg-primary-container text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary-container/20">
+          <button 
+            aria-label="Buy 3 Months IPTV Subscription"
+            className="w-full py-4 rounded-lg bg-primary-container text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary-container/20"
+          >
             Buy 3 Months — Instant Login
           </button>
         </div>
@@ -305,7 +320,10 @@ const Pricing = () => (
               </li>
             ))}
           </ul>
-          <button className="w-full py-4 rounded-lg bg-primary-container text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary-container/20">
+          <button 
+            aria-label="Buy 6 Months IPTV Subscription"
+            className="w-full py-4 rounded-lg bg-primary-container text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary-container/20"
+          >
             Buy 6 Months — Instant Login
           </button>
         </div>
@@ -345,7 +363,10 @@ const Pricing = () => (
               </li>
             ))}
           </ul>
-          <button className="w-full py-4 rounded-lg bg-gradient-to-r from-primary-container to-tertiary-container text-white font-bold hover:scale-105 transition-transform shadow-xl shadow-primary-container/30">
+          <button 
+            aria-label="Buy 12 Months IPTV Subscription - Best Seller"
+            className="w-full py-4 rounded-lg bg-gradient-to-r from-primary-container to-tertiary-container text-white font-bold hover:scale-105 transition-transform shadow-xl shadow-primary-container/30"
+          >
             Buy 12 Months — Instant Login
           </button>
         </div>
@@ -382,7 +403,10 @@ const Pricing = () => (
               </li>
             ))}
           </ul>
-          <button className="w-full py-4 rounded-lg bg-primary-container text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary-container/20">
+          <button 
+            aria-label="Buy 24 Months IPTV Subscription"
+            className="w-full py-4 rounded-lg bg-primary-container text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary-container/20"
+          >
             Buy 24 Months — Instant Login
           </button>
         </div>
